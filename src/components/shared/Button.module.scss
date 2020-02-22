@@ -1,0 +1,25 @@
+.btn {
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 30px;
+  border: 0;
+  margin: 10px 0;
+  width: 100%;
+  flex: 0 0 100%;
+  box-shadow: 0px 3px 2px #00000005;
+  font-size: 21px;
+}
+
+.btn-light {
+  background: #fff;
+  color: #333644;
+}
+
+.btn-primary {
+  background: rgb(19,196,184);
+  background: -moz-linear-gradient(45deg,  rgba(19,196,184,1) 0%, rgba(44,218,142,1) 100%);
+  background: -webkit-linear-gradient(45deg,  rgba(19,196,184,1) 0%,rgba(44,218,142,1) 100%);
+  background: linear-gradient(45deg,  rgba(19,196,184,1) 0%,rgba(44,218,142,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13c4b8', endColorstr='#2cda8e',GradientType=1 );
+  color: #fff;
+}
