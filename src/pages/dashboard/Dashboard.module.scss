@@ -1,0 +1,61 @@
+.plans {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  -ms-flex-wrap:nowrap;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch
+}
+
+.planItem {
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  overflow: hidden;
+  height: 300px;
+  flex: 0 0 170px;
+  margin-right: 20px;
+  background-position: center;
+  background-size: cover;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #76508890;
+  }
+}
+
+.planItemContent {
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+}
+
+.name {
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 900;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: #fff;
+}

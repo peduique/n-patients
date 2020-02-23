@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styles from './Button.module.scss';
 
-const Button = props => (
-  <button 
+const LinkRedirect = props => (
+  <Link 
     className={`${styles.btn} ${styles[props.style]}`}
-    type={props.type}
+    to={props.target}
   >
     {props.label}
-  </button>
+  </Link>
 );
 
-export default Button;
+export default LinkRedirect;

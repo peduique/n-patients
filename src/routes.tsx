@@ -1,19 +1,39 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { isAuthenticated } from "./services/auth";
+import Menu from './components/Menu';
 
-//Pages/Components
+/* 
+  Pages/Components 
+*/
 import LoginIndex from './pages/login/Index';
 import Login from './pages/login/Login';
+import Dashboard from './pages/dashboard/Dashboard';
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={props =>
+      isAuthenticated() ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+      )
+    }
+  />
+);
 
 const Routes = () => {
   return (
-    <Router>
+    <BrowserRouter>
+      {isAuthenticated() ? <Menu /> : ''}
       <Switch>
-        <Route path="/index" component={LoginIndex} />
+        <Route exact path="/" component={LoginIndex} />
         <Route path="/login" component={Login} />
-        <Route path="/teste" component={() => <h1>Teste</h1>} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <Route path="*" component={() => <h1>Página não encontrada</h1>} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   )
 }
 

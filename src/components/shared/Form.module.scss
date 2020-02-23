@@ -1,0 +1,29 @@
+.content {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.label {
+  font-size: 14px;
+  color: #1818188f;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #C5CCD6;
+  font-size: 15px;
+  transition: all .2s;
+  &:focus {
+    outline: none;
+    border-bottom-color: #F3534A;
+    color: #F3534A;
+  }
+}
