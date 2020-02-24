@@ -11,12 +11,12 @@ const Menu = () => {
         </Link>
       </li>
       <li>
-        <Link to="/teste" className={styles.menuItem}>
+        <Link to="/avaliations" className={styles.menuItem}>
           <i className={`${styles.menuItemIcon} icon-body`}></i>
         </Link>
       </li>
       <li>
-        <Link to="/dashboard" className={styles.menuItem}>
+        <Link to="/dashboard" className={styles.menuItemHome}>
           <i className={`${styles.menuItemIcon} icon-home`}></i>
         </Link>
       </li>
