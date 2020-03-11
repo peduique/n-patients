@@ -17,7 +17,7 @@ const Login = props => {
       { email: input.username, password: input.password }
     ).then(response => {
       login(response.data.token);
-      props.history.push('/home');
+      props.history.push('/dashboard');
     });
   }
 
